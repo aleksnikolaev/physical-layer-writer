@@ -80,6 +80,12 @@ A short, resonant observation that reframes the analysis. No CTA, no "subscribe"
 
 Followed by: "Corrections and responses welcome."
 
+Then two questions to practitioners. These carry the reconnaissance load of the whole issue, so write them last and write them hard. Each must be answerable from someone's working experience rather than from opinion, and each must name the specific thing you looked for and could not find. "Corrections and responses welcome" is an invitation, not a question, and on its own it produces nothing.
+
+Test every question before publishing. Write down two or three plausible answers and the next move each one gives you. If any answer leaves you with no next move, the question is wrong and gets rewritten before the issue ships. Example that worked:
+
+> "And has anyone dealt with the over-recovery side in practice? Waterlogging or buoyancy problems after levels came back up? I can find the mechanism described but almost nothing on how managers set the upper bound."
+
 ### Forbidden Patterns
 - Em dashes (---). Use periods, commas, or parentheses instead.
 - Superlatives ("revolutionary", "game-changing", "unprecedented")
@@ -164,7 +170,25 @@ Every Physical Layer post follows this structure. Do not deviate.
 6. **Strategy Patches**: 30-90 day actions for the reader
 7. **Limits and Confidence**: where data is weak, alternative explanations, model assumptions
 8. **Manipulation Analysis**: where the author is framing vs. reporting (UNIQUE differentiator)
-9. **Closing line**: resonant observation + "Corrections and responses welcome"
+9. **Closing line**: resonant observation, then the two practitioner questions per Closing Pattern
+
+#### Correction Issue (alternative structure)
+
+When the subject of an issue is an error in your own earlier claim, the structure above does not apply. Use this one. It has produced the highest substantive response of any issue so far.
+
+1. **Title line**: the earlier claim, that it was wrong, and what the correction rests on
+2. **Disclaimer**: standard
+3. **The earlier claim**: what you argued, in which issue, and the reasoning behind it. State plainly which part of it still stands
+4. **What you missed**: the evidence and where it was. If it sat in a source you were already citing, say so
+5. **The careful reading**: what the corrected figure does and does not mean. Take apart any number that pools several different states into one
+6. **The mechanism**: how the corrected effect actually works, sorted into categories
+7. **The case with a full public ledger**: one case documented end to end, with the supply side and the demand side reported separately
+8. **The control case**: a comparable case that did not work, and the single difference that accounts for it
+9. **The failure mode of the correction itself**: what goes wrong when the thing you were wrong about goes too far
+10. **Where this is weak**: what you did not read, what you left out and why, what selection is built into the evidence
+11. **Closing questions** per Closing Pattern
+
+Do not soften the admission. The admission is the reason the issue gets read.
 
 #### Disclaimer (standard, place at top)
 
@@ -245,6 +269,7 @@ When ready to publish:
 | Rounding numbers for drama | "Over 400 million gallons" is weaker than "434 million gallons." |
 | Missing Manipulation Analysis | This section IS the differentiator. Without it, this is just another newsletter. |
 | CTA closings ("Subscribe for more") | Breaks the analytical voice. End with insight, not a pitch. |
+| Closing with a generic invitation only ("thoughts?", "corrections welcome") | Produces no replies. The two specific practitioner questions are what bring people who know the field into the thread. |
 | Using em dashes | Author's style avoids them. Use periods or parentheses. |
 
 ## File Structure
