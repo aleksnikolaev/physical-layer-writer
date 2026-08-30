@@ -10,4 +10,6 @@ snowpack reports rather than with demand.
 
 Read the filing at https://www.cftc.gov/... and the registry at https://waterboards.ca.gov
 
+If the index keeps diverging you should buy the senior right instead.
+
 Subscribe for more analysis!

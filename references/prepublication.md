@@ -51,7 +51,11 @@ actually ships. The mechanical checks below cannot see any of it.
 9. **Red lines.** Scan for accusations of crime (fraud, conspiracy, cover-up), investment advice
    (buy, sell, invest in), names of clients or of any company from the author's commercial work,
    private life details of an individual, and categorical prediction ("WILL collapse"). Any hit is
-   a stop, not a warning.
+   a stop, not a warning, and the script exits nonzero on it.
+
+   The script only reads the first two of those five. Client names, private life details and
+   categorical prediction need a person: they cannot be told from a word list. A green run says
+   nothing about them.
 10. **Closing questions, main articles only.** Social copy is governed by check 5 instead: a
     Reddit post may close on a single engagement question, a thread may simply link the article.
     An article ends with two questions to practitioners. Fail when the

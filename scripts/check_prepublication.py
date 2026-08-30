@@ -100,7 +100,7 @@ def check(path):
                 hit(fails, n, f'red line: "{w}"')
         for pat in ADVICE:
             if re.search(pat, line, re.I):
-                hit(warns, n, "reads as investment advice")
+                hit(fails, n, "red line: reads as investment advice")
         for m in re.finditer(r"\bwe\b", line, re.I):
             hit(warns, n, f'"we" at col {m.start() + 1}, rewrite unless a specific team action')
 
@@ -126,7 +126,7 @@ def check(path):
     for u in bare_home:
         warns.append((None, f"link points at a homepage, not a page: {u}"))
     if urls and not truncated:
-        passes.append(f"{len(urls)} URLs, none truncated")
+        passes.append(f"{len(urls)} URL{'s' if len(urls) != 1 else ''}, none truncated")
 
     if kind == "article":
         low = raw.lower()
@@ -141,6 +141,18 @@ def check(path):
                                 f"found {tail.count('?')} question marks in the last lines"))
         else:
             passes.append("two closing questions present")
+
+    if kind == "article" and "_substack" in path.name:
+        for n, line in enumerate(lines, 1):
+            if re.match(r"^\s*\|.*\|", line):
+                hit(fails, n, "markdown table: Substack does not render tables, "
+                              "convert to a structured list")
+            if re.search(r"\[[^\]]+\]\([^)]+\)", line):
+                hit(warns, n, "raw link syntax in the production file, "
+                              "confirm it rendered before pasting")
+            if re.search(r"\*\*[^*]+\*\*", line):
+                hit(warns, n, "raw bold syntax in the production file, "
+                              "confirm it rendered before pasting")
 
     if kind == "social":
         if path.name.startswith("twitter_"):
