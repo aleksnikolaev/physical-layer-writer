@@ -1,6 +1,6 @@
 ---
 name: physical-layer-writer
-description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article".
+description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user says "check", "проверь текст", or before publishing any Physical Layer content.
 license: MIT
 canonical: https://github.com/aleksnikolaev/physical-layer-writer
 metadata:
@@ -112,7 +112,7 @@ Test every question before publishing. Write down two or three plausible answers
 
 These four are what domain practitioners flag first. They are not stylistic preferences: a
 reader who works in the field reads them as a signal that the piece was assembled rather than
-understood, and stops reading. Run the voice checker before publishing.
+understood, and stops reading. Run the Pre-Publication Check below before publishing.
 
 ## Hard rules
 
@@ -409,7 +409,7 @@ After showing the draft:
 - Iterate on flagged sections
 - Watch for AI-sounding phrases: uniform rhythm, superlatives, hedging chains
 - Verify the Manipulation Analysis section is honest and specific
-- Run the 10-point binary checklist (see references)
+- Run the Pre-Publication Check below
 
 ### Stage 7.5: Expert Review (mandatory when anyone has offered)
 
@@ -451,6 +451,80 @@ When ready to publish:
 | CTA closings ("Subscribe for more") | Breaks the analytical voice. End with insight, not a pitch. |
 | Closing with a generic invitation only ("thoughts?", "corrections welcome") | Produces no replies. The two specific practitioner questions are what bring people who know the field into the thread. |
 | Using em dashes | Author's style avoids them. Use periods or parentheses. |
+
+## Pre-Publication Check
+
+Run this against every file before publishing. It lives here, in this skill. There is no separate
+checker skill to invoke and no second copy of these rules anywhere. If no file is named, check
+every `.md` in the current post directory.
+
+### Mechanical checks
+
+1. **Dashes.** Search for the em-dash `—` (U+2014) everywhere, titles and closing lines included.
+   Replace with a period, a comma, or parentheses. Search the en-dash `–` (U+2013) and the double
+   hyphen `--` in the same pass, they arrive as substitutes.
+2. **Forbidden words.** `unprecedented`, `revolutionary`, `game-changing`, `In an era of`,
+   `In this article`, `might potentially`, `could perhaps`, exclamation marks, emojis. See
+   Forbidden Patterns above for the full list and the reasoning.
+3. **"We" audit.** Search `\bwe\b`. Keep it only for a specific team action ("we deployed").
+   Generic use ("we have", "we can see", "we need") gets rewritten to passive or to what the data
+   shows.
+4. **Uniform rhythm.** Three or more consecutive sentences within five words of each other is the
+   single most common machine fingerprint. Break one long sentence, combine two short ones.
+5. **CTA and self-promo.** No "Subscribe", "Follow for more", "Share this", "Like and retweet".
+   The piece closes with two practitioner questions. Reddit posts may carry an engagement
+   question, a thread may link the article, nothing else.
+6. **Raw markdown in Substack files.** In `*_substack.md`, check for table syntax, unrendered
+   `[text](url)`, and bold that Substack will not render.
+7. **Link integrity.** Every URL full, not truncated, pointing at a specific page rather than a
+   homepage, no two links to the same source.
+8. **Disclaimer.** Main articles only: present at the top, states the author is not a domain
+   expert, states the piece is commentary and analysis rather than expert assessment, and carries
+   "Corrections and responses welcome" at the bottom.
+9. **Red lines.** Scan for accusations of crime (fraud, conspiracy, cover-up), investment advice
+   (buy, sell, invest in), names of clients or of any company from the author's commercial work,
+   private life details of an individual, and categorical prediction ("WILL collapse"). Any hit is
+   a stop, not a warning.
+10. **Closing questions.** The piece ends with two questions to practitioners. Fail when the
+    closing is only a generic invitation or a resonant line with no question after it, and when a
+    question can be answered with an opinion rather than from working experience. Warn when a
+    question does not name the specific thing the author looked for and could not find. For each
+    question, take two or three plausible answers and say what the author does next. An answer that
+    leaves no next move means the question ships without a follow-up.
+
+### Practitioner-named markers, checked by hand
+
+The four markers domain readers flag first are in Forbidden Patterns above. Do not restate them
+here and do not copy them anywhere else, the copies drift apart. Check them separately and by
+hand: the mechanical list catches punctuation, forbidden words, rhythm and self-promo, and it
+caught none of what actually cost this channel a source. Two readers read the writing as
+machine-made; one of them was the second-deepest expert contact of the channel and he left over
+it. The verbatim threads are in `physical_layer/correspondence/`, they stay in local files.
+
+### Output
+
+```
+## Check: [filename]
+
+### FAIL (fix before publish)
+- [line N] Em-dash: "text — text" → "text. Text"
+- [line N] Red line: "fraud"
+
+### WARN
+- [line N] "we have" → rephrase
+- Sentences 12-14: uniform rhythm (18, 19, 17 words)
+
+### PASS
+- No exclamation marks, no emojis, no CTA
+- Disclaimer present
+- Links: N URLs, all full paths
+
+Score: X FAIL / Y WARN / Z PASS
+Verdict: PUBLISH / FIX FIRST
+```
+
+When checking a whole post directory, run against `article_en.md`, `article_substack.md`,
+`article_ru.md`, every `reddit_*.md` and every `twitter_*.md`, report per file, then summarise.
 
 ## File Structure
 
