@@ -25,45 +25,18 @@ actually ships. The mechanical checks below cannot see any of it.
 
 ### Mechanical checks
 
-1. **Dashes.** Search for the em-dash `—` (U+2014) everywhere, titles and closing lines included.
-   Replace with a period, a comma, or parentheses. Search the en-dash `–` (U+2013) and the double
-   hyphen `--` in the same pass, they arrive as substitutes.
-2. **Forbidden words.** `unprecedented`, `revolutionary`, `game-changing`, `In an era of`,
-   `In this article`, `might potentially`, `could perhaps`, exclamation marks, emojis. See
-   Forbidden Patterns above for the full list and the reasoning.
-3. **"We" audit.** Search `\bwe\b`. Keep it only for a specific team action ("we deployed").
-   Generic use ("we have", "we can see", "we need") gets rewritten to passive or to what the data
-   shows.
-4. **Uniform rhythm.** Three or more consecutive sentences within five words of each other is the
-   single most common machine fingerprint. Break one long sentence, combine two short ones.
-5. **CTA and self-promo.** No "Subscribe", "Follow for more", "Share this", "Like and retweet".
-   The piece closes with two practitioner questions. Reddit posts may carry an engagement
-   question, a thread may link the article, nothing else.
-6. **Raw markdown in Substack files.** In `*_substack.md`, check for table syntax, unrendered
-   `[text](url)`, and bold that Substack will not render.
-7. **Link integrity.** Every URL full, not truncated, pointing at a specific page rather than a
-   homepage. Repeated links to the same source are not a defect: one report legitimately carries
-   several claims, and every claim needs its own URL. Source concentration is the Stage 4 gate's
-   job, not this one.
-8. **Disclaimer.** Main articles only: present at the top, states the author is not a domain
-   expert, states the piece is commentary and analysis rather than expert assessment, and carries
-   "Corrections and responses welcome" at the bottom.
-9. **Red lines.** Scan for accusations of crime (fraud, conspiracy, cover-up), investment advice
-   (buy, sell, invest in), names of clients or of any company from the author's commercial work,
-   private life details of an individual, and categorical prediction ("WILL collapse"). Any hit is
-   a stop, not a warning, and the script exits nonzero on it.
+Not listed here. They are implemented in `../scripts/check_prepublication.py` and inventoried by
+that script itself:
 
-   The script only reads the first two of those five. Client names, private life details and
-   categorical prediction need a person: they cannot be told from a word list. A green run says
-   nothing about them.
-10. **Closing questions, main articles only.** Social copy is governed by check 5 instead: a
-    Reddit post may close on a single engagement question, a thread may simply link the article.
-    An article ends with two questions to practitioners. Fail when the
-    closing is only a generic invitation or a resonant line with no question after it, and when a
-    question can be answered with an opinion rather than from working experience. Warn when a
-    question does not name the specific thing the author looked for and could not find. For each
-    question, take two or three plausible answers and say what the author does next. An answer that
-    leaves no next move means the question ships without a follow-up.
+```bash
+python3 scripts/check_prepublication.py --list
+python3 scripts/check_prepublication.py posts/postNN/article_en.md
+```
+
+This file used to restate them. The restatement drifted from the code twice, and both times the
+prose said a rule was a stop while the script recorded a warning, so a draft carrying a red line
+came back green. One inventory, kept next to the code that runs, is the fix. Do not restate it
+here again.
 
 ### Practitioner-named markers, checked by hand
 

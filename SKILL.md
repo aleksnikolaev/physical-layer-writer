@@ -1,6 +1,6 @@
 ---
 name: physical-layer-writer
-description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user asks to check a Physical Layer post or draft, says "проверь текст", or names the pre-publication check before publishing.
+description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user asks to check a Physical Layer post or draft, says "проверь текст поста", or names the pre-publication check before publishing.
 license: MIT
 canonical: https://github.com/aleksnikolaev/physical-layer-writer
 metadata:
@@ -78,6 +78,9 @@ Activate when the user:
 - A database number stated without how it was derived and what the field actually contains.
 - A system-level conclusion with no operational detail under it: no permit number, no
   measurement method, no named actor, nothing that breaks.
+- Numbers rounded for drama. "434 million gallons" is stronger than "over 400 million".
+- A post without the Manipulation Analysis section. That section is the differentiator; without
+  it this is another newsletter.
 
 These four are what domain practitioners flag first. They are not stylistic preferences: a
 reader who works in the field reads them as a signal that the piece was assembled rather than
@@ -195,45 +198,10 @@ under every claim, own calculations labelled, Limits and Confidence present, aud
 four markers named by domain readers, and the closing-questions rule. Read it every time. A green
 script is not a verdict.
 
-## Anti-Patterns
+## Where things are
 
-| Anti-Pattern | Why It Fails |
-|--------------|--------------|
-| Abstract openings ("In an era of...") | Readers bounce. Lead with data or a specific moment. |
-| Listicle format | Screams SEO/AI content. Not compatible with systems analysis. |
-| Superlatives ("unprecedented crisis") | The data speaks for itself. Inflation weakens credibility. |
-| Uniform sentence rhythm | AI fingerprint. Mix short and long deliberately. |
-| Hedging chains ("might potentially perhaps") | Pick a position and state confidence level explicitly. |
-| Rounding numbers for drama | "Over 400 million gallons" is weaker than "434 million gallons." |
-| Missing Manipulation Analysis | This section IS the differentiator. Without it, this is just another newsletter. |
-| CTA closings ("Subscribe for more") | Breaks the analytical voice. End with insight, not a pitch. |
-| Closing with a generic invitation only ("thoughts?", "corrections welcome") | Produces no replies. The two specific practitioner questions are what bring people who know the field into the thread. |
-| Using em dashes | Author's style avoids them. Use periods or parentheses. |
-
-## File Structure
-
-This skill:
-- `SKILL.md` — trigger, forbidden patterns, hard rules, the eight stages
-- `references/voice-guide.md` — voice model, opening and closing patterns, the ten-point binary checklist, interview question bank
-- `references/post-structure.md` — interview extraction and the fixed five-part structure
-- `references/claims-and-risk.md` — property gates, fact check, risk scoring
-- `references/prepublication.md` — everything in the final check that a script cannot see
-- `references/publishing-surfaces.md` — Substack mechanics and per-surface distribution rules
-- `scripts/check_prepublication.py` — the mechanical half of the check
-- `scripts/fixtures/` — a file with known violations and its expected output
-
-Each post lives in `/project/posts/postNN/` with:
-- `article.md` or `article_en.md` (final text)
-- `FACT_CHECK_AUDIT.md` (per-claim verification)
-- `RISK_SCORING.md` (per-claim risk assessment)
-- `SOURCES.md` (archive log)
-- `sources/` (local copies of key sources)
-
-Shared assets in `/project/posts/_shared/`:
-- `PUBLISH_CHECKLIST.md`
-- `RISK_SCORING_FRAMEWORK.md`
-- `METHODOLOGY.md`
-- `archive_sources.js`
+Post directories, this skill's own layout and the shared assets are described in `README.md`.
+It is documentation for a person, not instruction for a run, and it is not loaded here.
 
 ---
 

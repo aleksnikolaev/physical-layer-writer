@@ -190,10 +190,47 @@ def collect(target):
     sys.exit(2)
 
 
+INVENTORY = """Mechanical checks implemented here. This text sits in the same file as the code it
+describes, twenty lines from it, which is the closest the two can be kept without generating one
+from the other. It is the only inventory: references/prepublication.md deliberately does not
+restate it, because the two restatements drifted apart twice and both defects reached review.
+Everything needing judgement is in references/prepublication.md.
+
+  dashes         em-dash, en-dash, double hyphen                          FAIL
+  words          unprecedented, revolutionary, game-changing,
+                 might potentially, could perhaps                         FAIL
+  openers        In an era of, In this article, Here's the breakdown,
+                 Here's what I found, at a sentence start only            FAIL
+  punctuation    exclamation marks, emoji                                 FAIL
+  cta            subscribe, follow for more, share this, like and
+                 retweet                                                  FAIL
+  red lines      fraud, conspiracy, cover-up; investment advice           FAIL
+                 (client names, private life, categorical prediction
+                 are NOT readable here, a person checks those)
+  we             every \\bwe\\b occurrence                                  WARN
+  rhythm         3 consecutive sentences within 5 words                   WARN
+  links          truncated URL                                            FAIL
+                 link to a homepage rather than a page                    WARN
+  articles       disclaimer complete, two closing questions               FAIL
+  substack       pipe tables in *_substack.md                             FAIL
+                 raw link and bold syntax there                           WARN
+  tweets         over 280 characters in twitter_*.md                      FAIL
+  records        FACT_CHECK_AUDIT, RISK_SCORING, SOURCES, METHODOLOGY
+                 are skipped, they are not prose
+"""
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("target", help="a file, or a post directory")
+    ap.add_argument("target", nargs="?", help="a file, or a post directory")
+    ap.add_argument("--list", action="store_true",
+                    help="print the mechanical checks this script implements, then exit")
     a = ap.parse_args()
+    if a.list:
+        print(INVENTORY)
+        return
+    if not a.target:
+        ap.error("give a file or a directory, or --list")
     files = collect(a.target)
     if not files:
         print("nothing to check: no publishable prose found", file=sys.stderr)

@@ -8,10 +8,11 @@ When ready to publish:
 
 - Format for Substack (WYSIWYG, not raw markdown; render via stackedit.io)
 - Archive key source URLs via web.archive.org/save/
-- **Practitioner review — record sent / not sent, with name and date.** This step no-ops silently
-  when skipped and nothing downstream notices. A standing offer from a domain practitioner to read drafts went
-  unused for six months because nothing in the pipeline surfaced it. Either send, or record an
-  explicit waiver with a reason.
+- **Practitioner review — record who it went to and who answered, with dates.** Stage 7.5 is
+  mandatory whenever anyone has offered, and there is no waiver: the only accepted record when
+  nothing was sent is that nobody ever offered. This step no-ops silently when skipped and nothing
+  downstream notices. A standing offer to read drafts went unused for six months because nothing in
+  the pipeline surfaced it.
 - Generate Substack subtitle (under 160 chars)
 - Suggest distribution plan (Reddit subreddits, HN angle, Twitter thread)
 - Record in FACT_CHECK_AUDIT and RISK_SCORING files per post
@@ -35,10 +36,10 @@ were verified in early 2026 and communities change them.
 
 | Surface | Constraint |
 |---|---|
-| A large topical subreddit, no formal rules | Self-post carrying the data works. This is the target surface. |
-| A large collapse/climate subreddit with an AI-content rule | A rule banning AI-generated content is a hard blocker. Do not post, regardless of how the piece was written. |
-| A very large environment subreddit | Link posts only, no self-posts, no editorialized titles. Use the original headline. |
-| A data-visualization subreddit | Requires an original chart tagged as such. Prose alone will not pass. |
+| r/water | No formal rules. A self-post carrying the data works. This is the target surface. |
+| r/collapse | Rule 14 bans AI-generated content, Rule 2 bans self-promo. A hard blocker: do not post, regardless of how the piece was written. |
+| r/environment | Rule 2, link posts only. Rule 4, no editorialized titles. Use the original headline. |
+| r/dataisbeautiful | Needs an original chart tagged [OC]. Prose alone will not pass. |
 
 **Self-post formatting is not article formatting.** A disclaimer stacked on top of heavily
 structured headings reads as machine-written, and a reader said so publicly under one of the
