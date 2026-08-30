@@ -409,7 +409,9 @@ After showing the draft:
 - Iterate on flagged sections
 - Watch for AI-sounding phrases: uniform rhythm, superlatives, hedging chains
 - Verify the Manipulation Analysis section is honest and specific
-- Run the Pre-Publication Check below
+- Run the Pre-Publication Check below, evidence gate first. An edit made at this stage can drop a
+  citation or delete a required section that Stage 6 already passed, so the gate runs again on the
+  text that ships
 
 ### Stage 7.5: Expert Review (mandatory when anyone has offered)
 
