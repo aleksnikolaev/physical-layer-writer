@@ -102,6 +102,33 @@ Test every question before publishing. Write down two or three plausible answers
 - Emojis
 - "We" (unless referring to a specific team action)
 - Self-promotion or product mentions
+- The segue before a breakdown ("Here's the breakdown:", "Here's what I found:"). Launch into
+  the thing instead.
+- Bolded mini-headings more often than roughly every two paragraphs, or headings that carry no
+  claim of their own.
+- A database number stated without how it was derived and what the field actually contains.
+- A system-level conclusion with no operational detail under it: no permit number, no
+  measurement method, no named actor, nothing that breaks.
+
+These four are what domain practitioners flag first. They are not stylistic preferences: a
+reader who works in the field reads them as a signal that the piece was assembled rather than
+understood, and stops reading. Run the voice checker before publishing.
+
+## Hard rules
+
+**Empty column is not absence.** Before writing that a category is missing from a dataset,
+check whether the field is populated for anything at all. A public registry will often leave a
+field blank for most of its records, so the absence of a value proves nothing about any one
+category. State what the field actually contains and for how many records, then draw the
+conclusion, or drop the claim.
+
+**Naming people.** Name only someone who spoke publicly, under their own handle, in a thread
+attached to one of your own posts. Never name a source from private correspondence, and never
+publish a private message, even in a working note that might later be shared. Permission to use
+material is not permission to attach a name to it. When a private source has agreed their
+material can be used, describe them by role and jurisdiction and nothing else.
+
+**Send the draft to a practitioner before publishing.** See Stage 7.5.
 
 ## The Process
 
@@ -383,6 +410,18 @@ After showing the draft:
 - Watch for AI-sounding phrases: uniform rhythm, superlatives, hedging chains
 - Verify the Manipulation Analysis section is honest and specific
 - Run the 10-point binary checklist (see references)
+
+### Stage 7.5: Expert Review (mandatory when anyone has offered)
+
+Before Publishing Prep, send the draft to any practitioner who offered to read one. Record in
+the publishing notes who it went to and who answered.
+
+Practitioners who follow this kind of work routinely offer to read a draft. That offer is the
+cheapest quality gate available and it expires: an expert who keeps receiving finished
+conclusions instead of drafts stops answering. Check the project's expert notes for standing
+offers before assuming there are none.
+
+If no one has offered, record that explicitly rather than leaving the step silent.
 
 ### Stage 8: Publishing Prep
 
