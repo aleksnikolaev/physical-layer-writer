@@ -1,6 +1,6 @@
 ---
 name: physical-layer-writer
-description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user says "check", "проверь текст", or before publishing any Physical Layer content.
+description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user asks to check a Physical Layer post or draft, says "проверь текст", or names the pre-publication check before publishing.
 license: MIT
 canonical: https://github.com/aleksnikolaev/physical-layer-writer
 metadata:
@@ -488,8 +488,23 @@ read drafts stop arriving.
 ## Pre-Publication Check
 
 Run this against every file before publishing. It lives here, in this skill. There is no separate
-checker skill to invoke and no second copy of these rules anywhere. If no file is named, check
-every `.md` in the current post directory.
+checker skill to invoke and no second copy of these rules anywhere.
+
+If no file is named, check the publishable prose in the current post directory: `article*.md`,
+`reddit_*.md`, `twitter_*.md`. The audit records (`FACT_CHECK_AUDIT.md`, `RISK_SCORING.md`,
+`SOURCES.md`) are not prose and are not checked as prose. They are what the evidence gate reads.
+
+### Evidence gate, main articles only
+
+Run the 10-Point Binary Checklist in `references/voice-guide.md` before anything below. It is the
+canonical list, do not restate it here. A required check failing is a stop regardless of how the
+mechanical pass scores: a source URL under every factual claim, own calculations labelled as model
+or analysis, no motive imputed without a quote, a Limits and Confidence section, projections
+hedged, and an audit trail (METHODOLOGY plus FACT_CHECK_AUDIT).
+
+Stage 6 runs this gate too, but Stage 7 permits edits afterwards. A refinement can introduce an
+uncited claim or delete a required section, so the gate runs again here, last, on the text that
+actually ships. The mechanical checks below cannot see any of it.
 
 ### Mechanical checks
 
@@ -510,7 +525,9 @@ every `.md` in the current post directory.
 6. **Raw markdown in Substack files.** In `*_substack.md`, check for table syntax, unrendered
    `[text](url)`, and bold that Substack will not render.
 7. **Link integrity.** Every URL full, not truncated, pointing at a specific page rather than a
-   homepage, no two links to the same source.
+   homepage. Repeated links to the same source are not a defect: one report legitimately carries
+   several claims, and every claim needs its own URL. Source concentration is the Stage 4 gate's
+   job, not this one.
 8. **Disclaimer.** Main articles only: present at the top, states the author is not a domain
    expert, states the piece is commentary and analysis rather than expert assessment, and carries
    "Corrections and responses welcome" at the bottom.
@@ -518,7 +535,9 @@ every `.md` in the current post directory.
    (buy, sell, invest in), names of clients or of any company from the author's commercial work,
    private life details of an individual, and categorical prediction ("WILL collapse"). Any hit is
    a stop, not a warning.
-10. **Closing questions.** The piece ends with two questions to practitioners. Fail when the
+10. **Closing questions, main articles only.** Social copy is governed by check 5 instead: a
+    Reddit post may close on a single engagement question, a thread may simply link the article.
+    An article ends with two questions to practitioners. Fail when the
     closing is only a generic invitation or a resonant line with no question after it, and when a
     question can be answered with an opinion rather than from working experience. Warn when a
     question does not name the specific thing the author looked for and could not find. For each
