@@ -1,11 +1,7 @@
 # Pre-publication check
 
-Read this at Stage 7, before Stage 8, and whenever the author asks to check a post.
-The mechanical part of it is also implemented as `scripts/check_prepublication.py`, run the
-script first and read this file for everything the script cannot see.
-
-Run this against every file before publishing. It lives here, in this skill. There is no separate
-checker skill to invoke and no second copy of these rules anywhere.
+Read this at Stage 7 on the draft, and again after Stage 8 on the files that ship. Run
+`scripts/check_prepublication.py` first, then read this file for everything the script cannot see.
 
 If no file is named, check the publishable prose in the current post directory: `article*.md`,
 `reddit_*.md`, `twitter_*.md`. The audit records (`FACT_CHECK_AUDIT.md`, `RISK_SCORING.md`,

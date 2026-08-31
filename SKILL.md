@@ -127,24 +127,26 @@ and closing patterns. Forbidden Patterns above is the short list that never gets
 
 ### Stage 3: Interview Extraction
 
-Extract the author's own knowledge before writing anything. Question banks, the extraction
-sequence and what counts as a finished answer: `references/post-structure.md`.
+Extract the author's own knowledge before writing anything. The extraction sequence is in
+`references/post-structure.md`, the question bank it draws on is in `references/voice-guide.md`.
 
 ### Stage 4: Claims Table & Property Gates
 
-Every factual claim passes ten property gates before it may enter the draft. The gates, the table
-format and the worked examples: `references/claims-and-risk.md`.
+Nine property gates run on each factual claim before it may enter the draft, and a tenth runs over
+the finished set. The gates, the claims-table format and the worked examples:
+`references/claims-and-risk.md`.
 
 ### Stage 5: Draft in Fixed Structure
 
 The post has a fixed nine-part structure, from the title line to the two closing questions, and
-correction issues have their own nine parts. Manipulation Analysis is the section that
+correction issues have eleven of their own. Manipulation Analysis is the section that
 differentiates the series. Both structures: `references/post-structure.md`.
 
 ### Stage 6: Fact Check & Risk Score
 
-Per-claim verification and per-claim risk assessment, with the jurisdiction and content-type
-tables: `references/claims-and-risk.md`.
+Per-claim verification on a fixed schema, one numbered row per claim, then risk scoring across
+three dimensions: legal exposure, enforceability, defense weakness.
+See `references/claims-and-risk.md`.
 
 ### Stage 7: Refinement
 
@@ -194,9 +196,10 @@ python3 scripts/check_prepublication.py posts/postNN/
 ```
 
 The half a script cannot see is in `references/prepublication.md`: the evidence gate (a source
-under every claim, own calculations labelled, Limits and Confidence present, audit trail), the
-four markers named by domain readers, and the closing-questions rule. Read it every time. A green
-script is not a verdict.
+under every claim, own calculations labelled, Limits and Confidence present, audit trail) and the
+four markers named by domain readers. Whether the two closing questions actually work is judged
+against Closing Patterns in `references/voice-guide.md`. Read both every time. A green script is
+not a verdict.
 
 ## Where things are
 
