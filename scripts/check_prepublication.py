@@ -18,9 +18,8 @@ FORBIDDEN_WORDS = [
     "unprecedented", "revolutionary", "game-changing", "game changing",
     "might potentially", "could perhaps",
 ]
-# openers: only where a sentence starts. "the highest number in this article" is a legitimate
-# self-reference inside Manipulation Analysis and must not be flagged; "In this article, we will"
-# is the AI fingerprint. Caught on post05, 30.08.2026.
+# openers: matched only where a sentence starts. "the highest number in this article" is a
+# legitimate self-reference; "In this article, we will" is not.
 FORBIDDEN_OPENERS = [
     "In an era of", "In this article", "Here's the breakdown", "Here's what I found",
 ]
@@ -34,6 +33,7 @@ URL = re.compile(r"https?://[^\s)\]<>\"']+")
 # a heading, a list marker, or a table pipe is not prose
 NON_PROSE = re.compile(r"^\s*(#{1,6}\s|[-*+]\s|\d+\.\s|\|)")
 
+PUBLISHABLE = {"article", "social"}
 ARTICLE = re.compile(r"^article.*\.md$")
 SOCIAL = re.compile(r"^(reddit|twitter)_.*\.md$")
 RECORDS = {"FACT_CHECK_AUDIT.md", "RISK_SCORING.md", "SOURCES.md", "METHODOLOGY.md"}
@@ -184,16 +184,12 @@ def collect(target):
     if p.is_file():
         return [p]
     if p.is_dir():
-        out = [f for f in sorted(p.glob("*.md")) if classify(f) != "record"]
-        return out
+        return [f for f in sorted(p.glob("*.md")) if classify(f) in PUBLISHABLE]
     print(f"not found: {target}", file=sys.stderr)
     sys.exit(2)
 
 
-INVENTORY = """Mechanical checks implemented here. This text sits in the same file as the code it
-describes, twenty lines from it, which is the closest the two can be kept without generating one
-from the other. It is the only inventory: references/prepublication.md deliberately does not
-restate it, because the two restatements drifted apart twice and both defects reached review.
+INVENTORY = """Mechanical checks implemented here. This is the only inventory of them.
 Everything needing judgement is in references/prepublication.md.
 
   dashes         em-dash, en-dash, double hyphen                          FAIL

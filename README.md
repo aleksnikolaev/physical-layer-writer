@@ -3,22 +3,18 @@
 A ghostwriting skill for investigative analysis and systems-intelligence briefs: structured
 interview, claim gates, fixed post structure, and a pre-publication check.
 
-Documentation for a person. Nothing here is loaded at runtime.
-
 ## Layout
 
-| Path | Loaded | Contents |
+| Path | Read at | Contents |
 |---|---|---|
-| `SKILL.md` | every activation | trigger, forbidden patterns, hard rules, eight stages that route to the rest |
+| `SKILL.md` | activation | trigger, forbidden patterns, hard rules, the eight stages |
 | `references/voice-guide.md` | Stage 2 | voice model, opening and closing patterns, ten-point binary checklist, interview question bank |
-| `references/post-structure.md` | Stages 3 and 5 | interview extraction, the fixed five-part structure |
+| `references/post-structure.md` | Stages 3 and 5 | interview extraction, the nine-part post structure and the correction-issue structure |
 | `references/claims-and-risk.md` | Stages 4 and 6 | property gates, fact check, risk scoring |
-| `references/prepublication.md` | Stage 7 | the half of the final check that needs judgement |
+| `references/prepublication.md` | Stages 7 and 8 | the half of the final check that needs judgement |
 | `references/publishing-surfaces.md` | Stage 8 | Substack mechanics, per-surface distribution rules |
-| `scripts/check_prepublication.py` | never, it is executed | the mechanical half of the check |
-| `scripts/fixtures/` | never | inputs and recorded output for the checker |
-
-Only `SKILL.md` costs context on every run. A reference is opened by the stage that names it.
+| `scripts/check_prepublication.py` | executed | the mechanical half of the check |
+| `scripts/fixtures/` | executed | inputs and recorded output for the checker |
 
 ## The checker
 
@@ -28,9 +24,10 @@ python3 scripts/check_prepublication.py posts/postNN/article_en.md  # one file
 python3 scripts/check_prepublication.py posts/postNN/               # the publishable prose in a post
 ```
 
-Exits nonzero on any failure. `--list` is the only inventory of the mechanical rules;
-`references/prepublication.md` deliberately does not restate them, because two restatements drifted
-apart twice and both defects reached review.
+Exits nonzero on any failure. `--list` is the only inventory of the mechanical rules.
+
+Run it at Stage 7 on the draft and again after Stage 8 on the files that ship: Stage 8 produces the
+Substack variant and the distribution copy, which carry their own checks.
 
 After changing the checker, re-run the fixtures and regenerate their recorded output in the same
 commit. See `scripts/fixtures/README.md`.

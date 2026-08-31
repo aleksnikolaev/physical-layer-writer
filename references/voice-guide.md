@@ -82,6 +82,12 @@ Never use:
 
 Always followed by: "Corrections and responses welcome."
 
+Then two questions to practitioners. These carry the reconnaissance load of the whole issue, so write them last and write them hard. Each must be answerable from someone's working experience rather than from opinion, and each must name the specific thing you looked for and could not find. "Corrections and responses welcome" is an invitation, not a question, and on its own it produces nothing.
+
+Test every question before publishing. Write down two or three plausible answers and the next move each one gives you. If any answer leaves you with no next move, the question is wrong and gets rewritten before the issue ships. Example that worked:
+
+> "And has anyone dealt with the over-recovery side in practice? Waterlogging or buoyancy problems after levels came back up? I can find the mechanism described but almost nothing on how managers set the upper bound."
+
 Never:
 - "Subscribe for more insights"
 - "Share this with someone who needs to read it"
@@ -180,36 +186,3 @@ Before publishing, every check must pass:
 ---
 
 *Reference document for the Physical Layer Writer skill.*
-
----
-
-## Voice sections moved from SKILL.md, 30.08.2026
-
-The Physical Layer has a specific voice calibrated from published posts. Follow this profile exactly.
-
-### Sentence Structure
-Mixed. Short punchy sentences for emphasis ("Droughts end. Overdraft of a 6,000-year aquifer operates on a different timescale."). Longer flowing sentences for complex analysis with inline sources. No sentence exceeds 40 words unless it contains a data series.
-
-### Tone
-Analytical, understated, honest about limitations. First person singular ("I") sparingly and only for direct experience or methodology disclosure. Never promotional. Never alarmist. Let the data carry the weight.
-
-### Technical Depth
-Accessible technical. Explains frameworks inline for a non-specialist audience ("Lotka-Volterra Competition models three sectors competing for one declining aquifer. It shows which sector faces cuts first."). Uses precise numbers, never rounds for drama.
-
-### Opening Pattern
-Context bridge from the previous issue, then a direct statement of what this issue does differently. No abstractions. No "In this article we'll explore." Example:
-
-> "Last issue mapped the competition between water, energy, and compute. This issue does something different: it applies mathematical models to publicly available aquifer data and reports what they show."
-
-### Closing Pattern
-A short, resonant observation that reframes the analysis. No CTA, no "subscribe", no sales pitch. Example:
-
-> "Droughts end. Overdraft of a 6,000-year aquifer operates on a different timescale."
-
-Followed by: "Corrections and responses welcome."
-
-Then two questions to practitioners. These carry the reconnaissance load of the whole issue, so write them last and write them hard. Each must be answerable from someone's working experience rather than from opinion, and each must name the specific thing you looked for and could not find. "Corrections and responses welcome" is an invitation, not a question, and on its own it produces nothing.
-
-Test every question before publishing. Write down two or three plausible answers and the next move each one gives you. If any answer leaves you with no next move, the question is wrong and gets rewritten before the issue ships. Example that worked:
-
-> "And has anyone dealt with the over-recovery side in practice? Waterlogging or buoyancy problems after levels came back up? I can find the mechanism described but almost nothing on how managers set the upper bound."

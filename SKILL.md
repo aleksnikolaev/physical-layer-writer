@@ -104,10 +104,7 @@ material can be used, describe them by role and jurisdiction and nothing else.
 
 ## The Process
 
-Eight stages. The detail for four of them lives in `references/`, deliberately: this file is
-loaded in full whenever the skill activates, and material needed at one stage only does not belong
-in every activation. Open the named file when you reach that stage. Working from memory of a
-reference is how a required check gets skipped.
+Eight stages. Where a stage names a file in `references/`, open it and work from it.
 
 ### Stage 1: Topic & Thesis
 
@@ -140,8 +137,9 @@ format and the worked examples: `references/claims-and-risk.md`.
 
 ### Stage 5: Draft in Fixed Structure
 
-The post has a fixed five-part structure and the Manipulation Analysis section is the part that
-differentiates it. Structure and section-by-section guidance: `references/post-structure.md`.
+The post has a fixed nine-part structure, from the title line to the two closing questions, and
+correction issues have their own nine parts. Manipulation Analysis is the section that
+differentiates the series. Both structures: `references/post-structure.md`.
 
 ### Stage 6: Fact Check & Risk Score
 
@@ -179,18 +177,20 @@ If no one has offered, record that explicitly rather than leaving the step silen
 ### Stage 8: Publishing Prep
 
 Substack mechanics, source archiving, the practitioner-review record, and the rules each
-distribution surface enforces: `references/publishing-surfaces.md`.
+distribution surface enforces: `references/publishing-surfaces.md`. Run the Pre-Publication Check
+again once this stage has produced the final files.
 
 ## Pre-Publication Check
 
-Run it at Stage 7 and again before Stage 8, and whenever the author asks to check a post.
+Run it twice: at Stage 7 on the draft, and after Stage 8 on the files that ship. Stage 8 produces
+the Substack variant and the distribution copy, and those carry their own checks, so a run that
+stops before Stage 8 never sees them. Also run it whenever the author asks to check a post.
 
-Two halves. The mechanical half is a script, `scripts/check_prepublication.py`, because a prose
-checklist gets skipped and a script does not: the no-em-dash rule existed for months while
-em-dashes kept reaching published posts. Run it first:
+Two halves. The mechanical half is a script:
 
 ```bash
 python3 scripts/check_prepublication.py posts/postNN/article_en.md
+python3 scripts/check_prepublication.py posts/postNN/
 ```
 
 The half a script cannot see is in `references/prepublication.md`: the evidence gate (a source
@@ -200,8 +200,7 @@ script is not a verdict.
 
 ## Where things are
 
-Post directories, this skill's own layout and the shared assets are described in `README.md`.
-It is documentation for a person, not instruction for a run, and it is not loaded here.
+Post directories, this skill's own layout and the shared assets: `README.md`.
 
 ---
 

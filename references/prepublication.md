@@ -33,10 +33,7 @@ python3 scripts/check_prepublication.py --list
 python3 scripts/check_prepublication.py posts/postNN/article_en.md
 ```
 
-This file used to restate them. The restatement drifted from the code twice, and both times the
-prose said a rule was a stop while the script recorded a warning, so a draft carrying a red line
-came back green. One inventory, kept next to the code that runs, is the fix. Do not restate it
-here again.
+Do not restate them here. One inventory, kept next to the code that runs.
 
 ### Practitioner-named markers, checked by hand
 
