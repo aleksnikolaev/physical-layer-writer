@@ -15,9 +15,10 @@ mechanical pass scores: a source URL under every factual claim, own calculations
 or analysis, no motive imputed without a quote, a Limits and Confidence section, projections
 hedged, and an audit trail (METHODOLOGY plus FACT_CHECK_AUDIT).
 
-Stage 6 runs this gate too, but Stage 7 permits edits afterwards. A refinement can introduce an
-uncited claim or delete a required section, so the gate runs again here, last, on the text that
-actually ships. The mechanical checks below cannot see any of it.
+Stage 6 runs this gate too, but every stage after it permits edits: a refinement can introduce an
+uncited claim, and Stage 8 can drop a required section while reflowing the text for a platform.
+So the gate runs on each pass of this check, and the pass after Stage 8 is the one that sees what
+actually ships. The mechanical checks cannot see any of it.
 
 ### Mechanical checks
 

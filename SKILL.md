@@ -132,9 +132,11 @@ Extract the author's own knowledge before writing anything. The extraction seque
 
 ### Stage 4: Claims Table & Property Gates
 
-Nine property gates run on each factual claim before it may enter the draft, and a tenth runs over
-the finished set. The gates, the claims-table format and the worked examples:
-`references/claims-and-risk.md`.
+Claims go into a table and the gate suite runs against that table, not against claims in
+isolation. Some gates apply to every claim, some fire only where its shape calls for them, a
+comparison or a declared control case, and the last one measures the finished set. Six of the ten
+have nothing to run against until the table exists. The gates, the table format and the worked
+examples: `references/claims-and-risk.md`.
 
 ### Stage 5: Draft in Fixed Structure
 
