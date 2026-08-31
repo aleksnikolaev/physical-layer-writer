@@ -12,7 +12,7 @@ If no file is named, check the publishable prose in the current post directory: 
 
 ### Evidence gate, main articles only
 
-Run the 10-Point Binary Checklist in `voice-guide.md`. It is the canonical list, do not restate it
+Run the 10-Point Binary Checklist in `references/voice-guide.md`. It is the canonical list, do not restate it
 here. A required check failing is a stop regardless of how the
 mechanical pass scores: a source URL under every factual claim, own calculations labelled as model
 or analysis, no motive imputed without a quote, a Limits and Confidence section, projections
@@ -25,7 +25,7 @@ actually ships. The mechanical checks cannot see any of it.
 
 ### Mechanical checks
 
-Not listed here. They are implemented in `../scripts/check_prepublication.py` and inventoried by
+Not listed here. They are implemented in `scripts/check_prepublication.py` and inventoried by
 that script itself:
 
 ```bash

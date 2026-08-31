@@ -3,7 +3,7 @@
 
 Deterministic only. Everything requiring judgement (the evidence gate, the four
 practitioner-named markers, whether a closing question can be answered from working
-experience) lives in ../references/prepublication.md and is read by a human or an agent.
+experience) lives in references/prepublication.md and is read by a human or an agent.
 A green run here is not a verdict to publish.
 
 Exit codes: 0 no FAIL, 1 at least one FAIL, 2 bad invocation.

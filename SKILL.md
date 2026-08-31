@@ -9,9 +9,9 @@ description: >-
   so use it when the user asks to check a Physical Layer post or draft, says "проверь текст поста",
   or names the pre-publication check before publishing.
 license: MIT
-canonical: https://github.com/aleksnikolaev/physical-layer-writer
 metadata:
   author: Alex Nikolaev
+  canonical: https://github.com/aleksnikolaev/physical-layer-writer
   based_on: founder-voice-ghostwriter by Bayram Annakov (https://github.com/BayramAnnakov/founder-voice-ghostwriter)
 ---
 
