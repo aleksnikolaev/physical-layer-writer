@@ -1,0 +1,23 @@
+
+## Check: article_substack_dirty.md  [article]
+
+### FAIL (fix before publish)
+- [line 6] markdown table: Substack does not render tables, convert to a structured list
+- [line 7] markdown table: Substack does not render tables, convert to a structured list
+- [line 8] markdown table: Substack does not render tables, convert to a structured list
+
+### WARN
+- [line 10] raw link syntax in the production file, confirm it rendered before pasting
+- [line 10] raw bold syntax in the production file, confirm it rendered before pasting
+
+### PASS
+- no em-dashes or en-dashes
+- no emoji
+- 1 URL, none truncated
+- disclaimer present
+- two closing questions present
+
+Score: 3 FAIL / 2 WARN / 5 PASS
+Verdict: FIX FIRST
+
+The judgement half of the check is in references/prepublication.md. A green run here is not a verdict.

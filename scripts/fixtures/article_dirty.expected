@@ -1,0 +1,26 @@
+
+## Check: article_dirty.md  [article]
+
+### FAIL (fix before publish)
+- [line 3] em-dash: "Water rights data is fragmented by design — no MLS equivalent exists."
+- [line 5] forbidden: "unprecedented"
+- [line 5] forbidden opener: "Here's the breakdown"
+- [line 13] red line: reads as investment advice
+- [line 15] exclamation mark: "Subscribe for more analysis!"
+- [line 15] CTA / self-promo: "subscribe"
+- truncated URL: https://www.cftc.gov/...
+- disclaimer incomplete: needs the 'not a domain expert' line and 'Corrections and responses welcome' at the end
+- closing: an article ends with two practitioner questions, found 0 question marks in the last lines
+
+### WARN
+- [line 5] "we" at col 39, rewrite unless a specific team action
+- uniform rhythm, sentences 1-3: [12, 11, 15] words
+- link points at a homepage, not a page: https://waterboards.ca.gov
+
+### PASS
+- no emoji
+
+Score: 9 FAIL / 3 WARN / 1 PASS
+Verdict: FIX FIRST
+
+The judgement half of the check is in references/prepublication.md. A green run here is not a verdict.

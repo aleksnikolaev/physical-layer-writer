@@ -82,6 +82,12 @@ Never use:
 
 Always followed by: "Corrections and responses welcome."
 
+Then two questions to practitioners. These carry the reconnaissance load of the whole issue, so write them last and write them hard. Each must be answerable from someone's working experience rather than from opinion, and each must name the specific thing you looked for and could not find. "Corrections and responses welcome" is an invitation, not a question, and on its own it produces nothing.
+
+Test every question before publishing. Write down two or three plausible answers and the next move each one gives you. If any answer leaves you with no next move, the question is wrong and gets rewritten before the issue ships. Example that worked:
+
+> "And has anyone dealt with the over-recovery side in practice? Waterlogging or buoyancy problems after levels came back up? I can find the mechanism described but almost nothing on how managers set the upper bound."
+
 Never:
 - "Subscribe for more insights"
 - "Share this with someone who needs to read it"
