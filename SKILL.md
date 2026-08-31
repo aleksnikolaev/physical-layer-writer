@@ -1,6 +1,13 @@
 ---
 name: physical-layer-writer
-description: Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts thesis, evidence, and counter-arguments through structured interview. Produces sourced, risk-scored content in the author's analytical voice. Use when user wants to write a Physical Layer post, investigative article, systems analysis, or says things like "new post", "write about", "draft analysis", "next article". Also the single place the pre-publication check lives: use when the user asks to check a Physical Layer post or draft, says "проверь текст поста", or names the pre-publication check before publishing.
+description: >-
+  Collaborative ghostwriting for investigative analysis and systems intelligence briefs. Extracts
+  thesis, evidence, and counter-arguments through structured interview. Produces sourced,
+  risk-scored content in the author's analytical voice. Use when the user wants to write a Physical
+  Layer post, investigative article or systems analysis, or says things like "new post", "write
+  about", "draft analysis", "next article". Also the single place the pre-publication check lives,
+  so use it when the user asks to check a Physical Layer post or draft, says "проверь текст поста",
+  or names the pre-publication check before publishing.
 license: MIT
 canonical: https://github.com/aleksnikolaev/physical-layer-writer
 metadata:
@@ -132,11 +139,9 @@ Extract the author's own knowledge before writing anything. The extraction seque
 
 ### Stage 4: Claims Table & Property Gates
 
-Claims go into a table and the gate suite runs against that table, not against claims in
-isolation. Some gates apply to every claim, some fire only where its shape calls for them, a
-comparison or a declared control case, and the last one measures the finished set. Six of the ten
-have nothing to run against until the table exists. The gates, the table format and the worked
-examples: `references/claims-and-risk.md`.
+Build the claims table for every number and attributed statement. Run the ten gates over the table
+before drafting. See `references/claims-and-risk.md` for the schema, applicability rules, and
+examples.
 
 ### Stage 5: Draft in Fixed Structure
 
@@ -190,17 +195,17 @@ Run it twice: at Stage 7 on the draft, and after Stage 8 on the files that ship.
 the Substack variant and the distribution copy, and those carry their own checks, so a run that
 stops before Stage 8 never sees them. Also run it whenever the author asks to check a post.
 
-Two halves. The mechanical half is a script:
+One order, both times. First the evidence gate: a source under every claim, own calculations
+labelled, Limits and Confidence present, audit trail. Then the mechanical script. Then the four
+markers named by domain readers.
 
 ```bash
 python3 scripts/check_prepublication.py posts/postNN/article_en.md
 python3 scripts/check_prepublication.py posts/postNN/
 ```
 
-The half a script cannot see is in `references/prepublication.md`: the evidence gate (a source
-under every claim, own calculations labelled, Limits and Confidence present, audit trail) and the
-four markers named by domain readers. Whether the two closing questions actually work is judged
-against Closing Patterns in `references/voice-guide.md`. Read both every time. A green script is
+The gate and the markers are in `references/prepublication.md`. Whether the two closing questions
+actually work is judged against Closing Patterns in `references/voice-guide.md`. A green script is
 not a verdict.
 
 ## Where things are

@@ -1,7 +1,10 @@
 # Pre-publication check
 
-Read this at Stage 7 on the draft, and again after Stage 8 on the files that ship. Run
-`scripts/check_prepublication.py` first, then read this file for everything the script cannot see.
+Read this at Stage 7 on the draft, and again after Stage 8 on the files that ship.
+
+One order, both times: the evidence gate below, then `scripts/check_prepublication.py`, then the
+practitioner-named markers. The gate comes first because a failing required check is a stop and
+there is no point scoring punctuation on a piece that cannot ship.
 
 If no file is named, check the publishable prose in the current post directory: `article*.md`,
 `reddit_*.md`, `twitter_*.md`. The audit records (`FACT_CHECK_AUDIT.md`, `RISK_SCORING.md`,
@@ -9,8 +12,8 @@ If no file is named, check the publishable prose in the current post directory: 
 
 ### Evidence gate, main articles only
 
-Run the 10-Point Binary Checklist in `references/voice-guide.md` before anything below. It is the
-canonical list, do not restate it here. A required check failing is a stop regardless of how the
+Run the 10-Point Binary Checklist in `voice-guide.md`. It is the canonical list, do not restate it
+here. A required check failing is a stop regardless of how the
 mechanical pass scores: a source URL under every factual claim, own calculations labelled as model
 or analysis, no motive imputed without a quote, a Limits and Confidence section, projections
 hedged, and an audit trail (METHODOLOGY plus FACT_CHECK_AUDIT).
